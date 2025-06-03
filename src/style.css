@@ -1,19 +1,19 @@
 :root {
   --md-sys-color-primary: #4285F4;
   --md-sys-color-success: #4CAF50;
-  --md-sys-color-warning: #4CAF50;
   --md-sys-color-error: #FF5252;
-  --md-sys-border-color: #FF5252;
-  --md-outlined-button-outline-color: #79747E;
+  --md-sys-color-on-surface: rgba(0, 0, 0, 0.87);
 }
 
 .main {
   width: 500px;
   height: 1200px;
-  border: 1px solid var(--md-sys-color-error);
+  color: var(--md-sys-color-on-surface);
+  interpolate-size: allow-keywords;
+  /* background-color: red; */
 }
 
-.header {
+.main__header {
   height: 53px;
   background-color: var(--md-sys-color-primary);
 }
@@ -21,43 +21,30 @@
 .stepper {
   position: relative;
   padding: 16px;
-  border: 0px solid var(--md-outlined-button-outline-color);
-  border-bottom-width: 1px;
-  transition: height 0.3s ease-in-out;
+  height: 56px;
+  transition: height 0.4s ease-in-out;
+  overflow: hidden;
 }
 
 .stepper--open {
-  height: 200px;
+  /* height: 250px; */
+  /* min-height: max-content; */
+  height: calc-size(max-content, size);
 }
 
-.stepper--closed {
-  height: calc(16px + 24px + 16px);
+.stepper--close {
+  /* height: 250px; */
+  /* min-height: max-content; */
+  /* height: calc-size(max-content, size); */
+  height: 56px;
 }
 
-.stepper .action {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-}
-
-.toggle {
-  transition: transform 0.3s ease-in-out;
-}
-
-.toggle--open {
-  transform: rotate(180deg);
-}
-
-.toggle--closed {
-  transform: rotate(0deg);
-}
-
-.title {
+.stepper__title {
   display: flex;
   gap: 8px;
 }
 
-.title .index {
+.stepper__index {
   background-color: var(--md-sys-color-primary);
   text-align: center;
   color: white;
@@ -66,6 +53,45 @@
   line-height: 24px;
 }
 
-.title .icon {
+.stepper__icon {
   color: var(--md-sys-color-success);
+}
+
+.stepper__action {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.stepper__toggle {
+  transition: transform 0.3s ease-in-out;
+}
+
+.stepper__toggle--open {
+  transform: rotate(180deg);
+}
+
+.stepper__toggle--closed {
+  transform: rotate(0deg);
+}
+
+.stepper__content--hidden {
+  display: none;
+}
+
+.stepper__content--visible {
+  display: block;
+}
+
+.stepper__subtitle {
+  margin-top: 8px;
+  opacity: 0.6;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
 }

@@ -1,80 +1,98 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form Filler</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=check,keyboard_arrow_down" />
-    <link rel="stylesheet" href="./src/reset.css">
-    <link rel="stylesheet" href="./src/style.css">
-  </head>
-  <body>
-    <main class="main md-typescale-body-medium">
-      <header class="header">
-        Form Filler
-      </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Filler</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=check,keyboard_arrow_down" />
+  <link rel="stylesheet" href="./src/reset.css">
+  <link rel="stylesheet" href="./src/style.css">
+</head>
 
-      <section class="stepper stepper--closed md-typescale-title-medium">
-        <div class="title">
-          <p class="index"> 1 </p>
-          <p class="text">
-            Detect form fields
-          </p>
-          <md-icon class="icon">check</md-icon>
-        </div>
-        <div class="action">
-          <md-icon-button class="toggle toggle--closed">
-            <md-icon>keyboard_arrow_down</md-icon>
-          </md-icon-button>
-        </div>
-      </section>
+<body>
+  <main class="main md-typescale-body-medium">
+    <header class="main__header"></header>
 
-      <section class="stepper stepper--closed md-typescale-title-medium">
-        <div class="title">
-          <p class="index"> 2 </p>
-          <p class="text">
-            Detect form fields
-          </p>
-          <md-icon class="icon">check</md-icon>
+    <section class="stepper stepper--open md-typescale-title-medium">
+      <div class="stepper__title">
+        <p class="stepper__index">1</p>
+        <p class="stepper__text">Detect form fields</p>
+        <md-icon class="stepper__icon">check</md-icon>
+      </div>
+      <div class="stepper__action">
+        <md-icon-button class="stepper__toggle stepper__toggle--open">
+          <md-icon>keyboard_arrow_down</md-icon>
+        </md-icon-button>
+      </div>
+      <article class="stepper__content stepper__content--visible">
+        <div class="stepper__subtitle md-typescale-body-medium">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem illo accusantium quas. Asperiores nulla, sit eum repellendus temporibus quas magnam nobis molestias consequuntur fuga quae odit cumque repudiandae voluptatibus fugit!
         </div>
-        <div class="action">
-          <md-icon-button class="toggle toggle--closed">
-            <md-icon>keyboard_arrow_down</md-icon>
-          </md-icon-button>
-        </div>
-      </section>
+      </article>
+    </section>
 
-      <section class="stepper stepper--closed md-typescale-title-medium">
-        <div class="title">
-          <p class="index"> 3 </p>
-          <p class="text">
-            Detect form fields
-          </p>
-          <md-icon class="icon">check</md-icon>
-        </div>
-        <div class="action">
-          <md-icon-button class="toggle toggle--closed">
-            <md-icon>keyboard_arrow_down</md-icon>
-          </md-icon-button>
-        </div>
-      </section>
+    <md-divider></md-divider>
 
-      <section class="stepper stepper--closed md-typescale-title-medium">
-        <div class="title">
-          <p class="index"> 4 </p>
-          <p class="text">
-            Detect form fields
-          </p>
-          <md-icon class="icon">check</md-icon>
+    <section class="stepper stepper--closed md-typescale-title-medium">
+      <div class="stepper__title">
+        <p class="stepper__index">2</p>
+        <p class="stepper__text">Detect form fields</p>
+        <md-icon class="stepper__icon">check</md-icon>
+      </div>
+      <div class="stepper__action">
+        <md-icon-button class="stepper__toggle stepper__toggle--closed">
+          <md-icon>keyboard_arrow_down</md-icon>
+        </md-icon-button>
+      </div>
+      <article class="stepper__content stepper__content--hidden">
+        <div class="stepper__subtitle md-typescale-body-medium">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus asperiores quia rem neque nisi, aliquam at repudiandae architecto dignissimos assumenda possimus optio nesciunt officiis ipsa tenetur, est, exercitationem harum placeat!
         </div>
-        <div class="action">
-          <md-icon-button class="toggle toggle--closed">
-            <md-icon>keyboard_arrow_down</md-icon>
-          </md-icon-button>
+      </article>
+    </section>
+
+    <md-divider></md-divider>
+
+    <section class="stepper stepper--closed md-typescale-title-medium">
+      <div class="stepper__title">
+        <p class="stepper__index">2</p>
+        <p class="stepper__text">Detect form fields</p>
+        <md-icon class="stepper__icon">check</md-icon>
+      </div>
+      <div class="stepper__action">
+        <md-icon-button class="stepper__toggle stepper__toggle--closed">
+          <md-icon>keyboard_arrow_down</md-icon>
+        </md-icon-button>
+      </div>
+      <article class="stepper__content stepper__content--hidden">
+        <div class="stepper__subtitle md-typescale-body-medium">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus asperiores quia rem neque nisi, aliquam at repudiandae architecto dignissimos assumenda possimus optio nesciunt officiis ipsa tenetur, est, exercitationem harum placeat!
         </div>
-      </section>
-    </main>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+      </article>
+    </section>
+
+    <md-divider></md-divider>
+
+    <section class="stepper stepper--closed md-typescale-title-medium">
+      <div class="stepper__title">
+        <p class="stepper__index">2</p>
+        <p class="stepper__text">Detect form fields</p>
+        <md-icon class="stepper__icon">check</md-icon>
+      </div>
+      <div class="stepper__action">
+        <md-icon-button class="stepper__toggle stepper__toggle--closed">
+          <md-icon>keyboard_arrow_down</md-icon>
+        </md-icon-button>
+      </div>
+      <article class="stepper__content stepper__content--hidden">
+        <div class="stepper__subtitle md-typescale-body-medium">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus asperiores quia rem neque nisi, aliquam at repudiandae architecto dignissimos assumenda possimus optio nesciunt officiis ipsa tenetur, est, exercitationem harum placeat!
+        </div>
+      </article>
+    </section>
+
+  </main>
+  <script type="module" src="/src/main.js"></script>
+</body>
 </html>
