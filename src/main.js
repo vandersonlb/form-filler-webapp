@@ -4,13 +4,15 @@
 import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js'
 import '@material/web/icon/icon.js'
 import '@material/web/iconbutton/icon-button.js'
-import '@material/web/divider/divider.js'
+// import '@material/web/divider/divider.js'
+// import '@material/web/labs/card/elevated-card.js'
+import '@material/web/labs/card/outlined-card.js'
 // import '@material/web/button/filled-button.js'
 // import '@material/web/textfield/outlined-text-field.js'
 
 document.adoptedStyleSheets.push(typescaleStyles.styleSheet)
 
-const steppers = document.querySelectorAll("section.stepper")
+const steppers = document.querySelectorAll(".stepper")
 const toggles = document.querySelectorAll(".stepper__action .stepper__toggle")
 
 console.log(steppers.classList);
@@ -36,8 +38,9 @@ toggles.forEach(toggle => {
 function openStepper(toggle, stepper, content) {
   toggle.classList.remove("stepper__toggle--closed")
   toggle.classList.add("stepper__toggle--open")
-  toggle.classList.remove("stepper--closed")
+  stepper.classList.remove("stepper--closed")
   stepper.classList.add("stepper--open")
+  stepper.classList.add("my-16")
   content.classList.remove("hide")
   content.classList.add("show")
 }
@@ -45,8 +48,9 @@ function openStepper(toggle, stepper, content) {
 function closeStepper(toggle, stepper, content) {
   toggle.classList.remove("stepper__toggle--open")
   toggle.classList.add("stepper__toggle--closed")
-  toggle.classList.remove("stepper--closed")
-  stepper.classList.remove("stepper--open")
+  stepper.classList.remove("stepper--closed")
+  stepper.classList.add("stepper--open")
+  stepper.classList.remove("my-16")
   content.classList.remove("show")
   content.classList.add("hide")
 }

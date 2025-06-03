@@ -14,10 +14,10 @@
   <main class="main md-typescale-body-medium">
     <header class="main__header"></header>
 
-    <section class="stepper stepper--open md-typescale-title-medium">
+    <md-outlined-card class="stepper stepper--open my-16 md-typescale-title-medium">
       <div class="stepper__title">
-        <p class="stepper__index">1</p>
-        <p class="stepper__text">Detect form fields</p>
+        <p class="stepper__index stepper__index--success">1</p>
+        <p class="stepper__text stepper__text--success">Detect form fields</p>
         <md-icon class="stepper__icon">check</md-icon>
       </div>
       <div class="stepper__action">
@@ -27,18 +27,16 @@
       </div>
       <article class="stepper__content stepper__content--visible">
         <div class="stepper__subtitle md-typescale-body-medium">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem illo accusantium quas. Asperiores nulla, sit eum repellendus temporibus quas magnam nobis molestias consequuntur fuga quae odit cumque repudiandae voluptatibus fugit!
+          Click to scan the current page for form fields that can be filled in automatically.
         </div>
       </article>
-    </section>
+    </md-outlined-card>
 
-    <md-divider></md-divider>
-
-    <section class="stepper stepper--closed md-typescale-title-medium">
+    <md-outlined-card class="stepper stepper--closed md-typescale-title-medium">
       <div class="stepper__title">
         <p class="stepper__index">2</p>
-        <p class="stepper__text">Detect form fields</p>
-        <md-icon class="stepper__icon">check</md-icon>
+        <p class="stepper__text">Connect Google Sheet</p>
+        <md-icon class="stepper__icon hide">check</md-icon>
       </div>
       <div class="stepper__action">
         <md-icon-button class="stepper__toggle stepper__toggle--closed">
@@ -47,18 +45,16 @@
       </div>
       <article class="stepper__content stepper__content--hidden">
         <div class="stepper__subtitle md-typescale-body-medium">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus asperiores quia rem neque nisi, aliquam at repudiandae architecto dignissimos assumenda possimus optio nesciunt officiis ipsa tenetur, est, exercitationem harum placeat!
+          Enter de URL of a Google Sheet containing the data you want to use for form filling.
         </div>
       </article>
-    </section>
+    </md-outlined-card>
 
-    <md-divider></md-divider>
-
-    <section class="stepper stepper--closed md-typescale-title-medium">
+    <md-outlined-card class="stepper stepper--closed md-typescale-title-medium">
       <div class="stepper__title">
-        <p class="stepper__index">2</p>
-        <p class="stepper__text">Detect form fields</p>
-        <md-icon class="stepper__icon">check</md-icon>
+        <p class="stepper__index">3</p>
+        <p class="stepper__text">Map form fields to spreadsheet</p>
+        <md-icon class="stepper__icon hide">check</md-icon>
       </div>
       <div class="stepper__action">
         <md-icon-button class="stepper__toggle stepper__toggle--closed">
@@ -67,18 +63,16 @@
       </div>
       <article class="stepper__content stepper__content--hidden">
         <div class="stepper__subtitle md-typescale-body-medium">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus asperiores quia rem neque nisi, aliquam at repudiandae architecto dignissimos assumenda possimus optio nesciunt officiis ipsa tenetur, est, exercitationem harum placeat!
+          Select which spreadsheet column should be used for each form field.
         </div>
       </article>
-    </section>
+    </md-outlined-card>
 
-    <md-divider></md-divider>
-
-    <section class="stepper stepper--closed md-typescale-title-medium">
+    <md-outlined-card class="stepper stepper--closed md-typescale-title-medium">
       <div class="stepper__title">
-        <p class="stepper__index">2</p>
-        <p class="stepper__text">Detect form fields</p>
-        <md-icon class="stepper__icon">check</md-icon>
+        <p class="stepper__index">4</p>
+        <p class="stepper__text">Select data row</p>
+        <md-icon class="stepper__icon hide">check</md-icon>
       </div>
       <div class="stepper__action">
         <md-icon-button class="stepper__toggle stepper__toggle--closed">
@@ -87,10 +81,10 @@
       </div>
       <article class="stepper__content stepper__content--hidden">
         <div class="stepper__subtitle md-typescale-body-medium">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus asperiores quia rem neque nisi, aliquam at repudiandae architecto dignissimos assumenda possimus optio nesciunt officiis ipsa tenetur, est, exercitationem harum placeat!
+          Choose which row of data from your spreadsheet to use for filling the form.!
         </div>
       </article>
-    </section>
+    </md-outlined-card>
 
   </main>
   <script type="module" src="/src/main.js"></script>
