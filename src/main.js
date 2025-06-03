@@ -1,24 +1,55 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+// index.js
+// import '@material/web/button/filled-button.js';
+// import '@material/web/button/outlined-button.js';
+// import '@material/web/checkbox/checkbox.js';
+import '@material/web/icon/icon.js';
+import '@material/web/iconbutton/icon-button.js';
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
 
-setupCounter(document.querySelector('#counter'))
+
+// import '@material/web/all.js';
+import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
+
+document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+
+const steppers = document.querySelectorAll("section.stepper");
+const toggles = document.querySelectorAll(".action .toggle");
+
+
+
+toggles.forEach(toggle => {
+  toggle.addEventListener("click", evt => {
+    let toggle = evt.target
+    let stepper = toggle.closest(".stepper")
+    let isClosed = [...toggle.classList].includes("toggle--closed")
+
+    closeAllSteppers()
+
+    if(isClosed) {
+      openStepper(toggle, stepper)
+    } else {
+      closeStepper(toggle, stepper)
+    }
+  })
+})
+
+function openStepper(toggle, stepper) {
+  toggle.classList.remove("toggle--closed")
+  toggle.classList.add("toggle--open")
+  stepper.classList.remove("stepper--closed")
+  stepper.classList.add("stepper--open")
+}
+
+function closeStepper(toggle, stepper) {
+  toggle.classList.remove("toggle--open")
+  toggle.classList.add("toggle--closed")
+  stepper.classList.remove("stepper--open")
+  stepper.classList.add("stepper--closed")
+}
+
+function closeAllSteppers() {
+  steppers.forEach(stepper => {
+    let toggle = stepper.querySelector(".action .toggle");
+    closeStepper(toggle, stepper)
+  })
+}
