@@ -1,22 +1,15 @@
-// import '@material/web/button/filled-button.js'
-// import '@material/web/button/outlined-button.js'
-// import '@material/web/checkbox/checkbox.js'
 import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js'
 import '@material/web/icon/icon.js'
 import '@material/web/iconbutton/icon-button.js'
-// import '@material/web/divider/divider.js'
-// import '@material/web/labs/card/elevated-card.js'
+import '@material/web/button/outlined-button.js'
 import '@material/web/labs/card/outlined-card.js'
-// import '@material/web/button/filled-button.js'
-// import '@material/web/textfield/outlined-text-field.js'
-
-document.adoptedStyleSheets.push(typescaleStyles.styleSheet)
+import '@material/web/progress/linear-progress.js'
+import '@material/web/textfield/outlined-text-field.js'
+import '@material/web/select/filled-select.js'
+import '@material/web/select/select-option.js'
 
 const steppers = document.querySelectorAll(".stepper")
 const toggles = document.querySelectorAll(".stepper__action .stepper__toggle")
-
-console.log(steppers.classList);
-
 
 toggles.forEach(toggle => {
   toggle.addEventListener("click", evt => {
@@ -62,3 +55,16 @@ function closeAllSteppers() {
     closeStepper(toggle, stepper, content)
   })
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.adoptedStyleSheets.push(typescaleStyles.styleSheet)
+  const stepperTextfield = document.querySelector(".stepper__textfield").shadowRoot;
+  const input = stepperTextfield.querySelector(".input-wrapper")
+  input.style.paddingTop = "6px";
+  input.style.paddingBottom = "6px";
+  document.querySelectorAll(".map__select").forEach(mappingSelect => {
+    const shadow = mappingSelect.shadowRoot;
+    shadow.querySelector("md-filled-field").style.height = "40px";
+    shadow.querySelector("#label").style.paddingTop = "8px";
+  });
+})

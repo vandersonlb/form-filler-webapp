@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Form Filler</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=check,keyboard_arrow_down" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=check,check_circle,error,keyboard_arrow_down,send,troubleshoot" />
   <link rel="stylesheet" href="./src/reset.css">
   <link rel="stylesheet" href="./src/style.css">
 </head>
@@ -29,7 +29,18 @@
         <div class="stepper__subtitle md-typescale-body-medium">
           Click to scan the current page for form fields that can be filled in automatically.
         </div>
+        <div class="stepper__alert stepper__alert--success md-typescale-label-large">
+          <md-icon class="stepper__alert-icon">check_circle</md-icon>
+          <p> X form fields found </p>
+        </div>
+        <div class="stepper__outlined-button-container">
+          <md-outlined-button class="stepper__outlined-button">
+            <md-icon slot="icon" class="outlined-button__icon">troubleshoot</md-icon>
+            Scan this page &nbsp;
+          </md-outlined-button>
+        </div>
       </article>
+      <md-linear-progress class="stepper__progress hide" indeterminate></md-linear-progress>
     </md-outlined-card>
 
     <md-outlined-card class="stepper stepper--closed md-typescale-title-medium">
@@ -45,9 +56,19 @@
       </div>
       <article class="stepper__content stepper__content--hidden">
         <div class="stepper__subtitle md-typescale-body-medium">
-          Enter de URL of a Google Sheet containing the data you want to use for form filling.
+          Enter de URL of a Google Sheet containing the data you want to use for form filling and click icon button.
+        </div>
+        <md-outlined-text-field placeholder="Google Sheets URL" class="stepper__textfield">
+          <md-icon-button toggle slot="trailing-icon">
+            <md-icon>send</md-icon>
+          </md-icon-button>
+        </md-outlined-text-field>
+        <div class="stepper__alert stepper__alert--error md-typescale-label-large">
+          <md-icon class="stepper__alert-icon">error</md-icon>
+          <p> Invalid Google Sheets URL. Please enter a valid URL </p>
         </div>
       </article>
+      <md-linear-progress class="stepper__progress hide" indeterminate></md-linear-progress>
     </md-outlined-card>
 
     <md-outlined-card class="stepper stepper--closed md-typescale-title-medium">
@@ -65,7 +86,26 @@
         <div class="stepper__subtitle md-typescale-body-medium">
           Select which spreadsheet column should be used for each form field.
         </div>
+        <div class="mapping__container">
+          <div class="mapping__item">
+            <div class="map__form-field">
+              <p class="md-typescale-label-large">Phone number</p>
+              <p class="md-typescale-label-medium light-text">Text</p>
+            </div>
+            <div class="map__sheet-column">
+              <md-filled-select class="map__select">
+                <md-select-option value="one">
+                  <div slot="headline">One</div>
+                </md-select-option>
+                <md-select-option value="two">
+                  <div slot="headline">Two</div>
+                </md-select-option>
+              </md-filled-select>
+            </div>
+          </div>
+        </div>
       </article>
+      <md-linear-progress class="stepper__progress hide" indeterminate></md-linear-progress>
     </md-outlined-card>
 
     <md-outlined-card class="stepper stepper--closed md-typescale-title-medium">
