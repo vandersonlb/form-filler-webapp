@@ -16,9 +16,9 @@
 
     <md-outlined-card class="stepper stepper--open my-16 md-typescale-title-medium">
       <div class="stepper__title">
-        <p class="stepper__index stepper__index--success">1</p>
-        <p class="stepper__text stepper__text--success">Detect form fields</p>
-        <md-icon class="stepper__icon">check</md-icon>
+        <p class="stepper__index">1</p>
+        <p class="stepper__text">Detect form fields</p>
+        <md-icon class="stepper__icon hide">check</md-icon>
       </div>
       <div class="stepper__action">
         <md-icon-button class="stepper__toggle stepper__toggle--open">
@@ -123,9 +123,43 @@
         <div class="stepper__subtitle md-typescale-body-medium">
           Choose which row of data from your spreadsheet to use for filling the form.!
         </div>
+        <div class="stepper__table-container">
+          <table class="md-typescale-body-medium">
+            <thead class="md-typescale-label-medium">
+              <tr>
+                <th></th>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>E-mail</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="radio" name="selecionado" value="1"></td>
+                <td>João Ferreira</td>
+                <td>da Silva</td>
+                <td>usuario@email.com</td>
+              </tr>
+              <tr>
+                <td><input type="radio" name="selecionado" value="2"></td>
+                <td>Maria Lurdes</td>
+                <td>dos Santos</td>
+                <td>usuario@email.com</td>
+              </tr>
+              <tr>
+                <td><input type="radio" name="selecionado" value="3"></td>
+                <td>Carlos Pereira</td>
+                <td>Arnaldo Trancoso</td>
+                <td>usuario@email.com</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="stepper__filled-button-container mt-6 pt-6">
+          <md-filled-button  onclick="pegarSelecionado()" class="stepper__filled-button">AUTO FILL FORM</md-filled-button>
+        </div>
       </article>
     </md-outlined-card>
-
   </main>
   <script type="module" src="/src/main.js"></script>
 </body>

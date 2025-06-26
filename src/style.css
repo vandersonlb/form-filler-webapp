@@ -113,6 +113,18 @@ body {
   padding: 0rem 1rem;
 }
 
+.stepper__filled-button-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.stepper__filled-button {
+  width: 100%;
+  padding: 0;
+  border-radius: 8px;
+}
+
 .stepper__progress {
   margin-top: 1rem;
 }
@@ -200,4 +212,58 @@ body {
 
 .light-text {
   font-weight: 300;
+}
+
+.stepper__table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+table {
+  border-collapse: collapse;
+  min-width: 100%;
+  text-align: left;
+  overflow: scroll;
+}
+
+thead {
+  background-color: #ddd;
+  color: var(--icon-color);
+}
+
+th {
+  text-transform: uppercase;
+}
+
+td {
+  border-bottom: 1px solid var(--border-color);
+  border-top: 1px solid var(--border-color);
+}
+
+th, td {
+  white-space: nowrap;
+  padding: 0.5rem;
+}
+
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--border-color);
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+input[type="radio"]:checked::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--md-sys-color-primary);
+  top: 2px;
+  left: 2px;
 }
